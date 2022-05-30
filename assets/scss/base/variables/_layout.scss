@@ -1,0 +1,26 @@
+// Spacing
+
+/**
+ * Fixed Spacing Variables:
+ * Though we can use relative units for most cases, we still need some fixed variable to overcome some drawbacks of relative units.
+ * Example we don't want the left and right side padding of container to be increased relatively to the font-size.
+ * The vertical spacing between two modules to be same regardless of increasing the font-size.
+ * The spacing scale is a base-8 scale. We chose a base-8 scale because eight is a highly composable number (it can be divided and multiplied many times and result in whole numbers), yet allows spacing dense enough for UI. 
+ The scale's exception is that it begins at 4px to allow smaller padding and margin for denser parts of the site, from there on it steps up consistently in equal values of 8px. Refer https://primer.style/css/support/
+*/
+$spacer-0: 0;
+$spacer-1: 4px;
+$spacer-2: 8px;
+$spacer-3: 16px;
+$spacer-4: 24px;
+$spacer-5: 32px;
+$spacer-6: 40px;
+$spacer-7: 80px;
+
+// Breakpoints.
+$bp-mobile: 767px;
+$bp-tablet: 1024px;
+$bp-desktop: 1280px;
+
+// Container width
+$container-max-width: 1404px;

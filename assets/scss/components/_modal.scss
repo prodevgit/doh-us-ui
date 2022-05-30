@@ -1,0 +1,216 @@
+.modal {
+  padding: 0 16px !important;
+  .btn-close {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .modal-header {
+    border: 0;
+    align-items: flex-start;
+  }
+  .modal-title {
+    font-weight: bold;
+    color: $color-green;
+    font-size: $font-size-18;
+  }
+  .modal-dialog {
+    max-width: 700px;
+    width: 100%;
+  }
+  .modal-content {
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 10px;
+  }
+  &__input {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 16px;
+    height: 30px;
+    padding: 8px;
+    color: $color-black;
+    font-size: $font-size-14;
+  }
+  &__input-text {
+    height: 80px;
+  }
+  &__head {
+    font-weight: 500;
+    color: $color-black;
+    font-size: 14px;
+  }
+  &__input-date {
+    padding-left: 32px;
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    ~ svg {
+      position: absolute;
+      left: 19px;
+      bottom: 21px;
+    }
+  }
+  .custom-select {
+    max-width: none;
+  }
+  .select-selected {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    color: #000;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    &::before {
+      background-color: #ffffff;
+    }
+    &::after {
+      border-color: $color-text;
+      top: 9px;
+    }
+  }
+  .select-items div {
+    font-size: $font-size-14;
+    color: $color-black;
+  }
+  .border {
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+  .tasks-head {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.comments {
+  &__user {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $color-green;
+    color: $color-white;
+    font-size: $font-size-14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  &__user-small {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  &__comment-text {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    height: 80px;
+    color: $color-black;
+    padding: 8px;
+    font-size: $font-size-14;
+  }
+  &__file {
+    position: relative;
+    margin-left: 10px;
+    font-size: 14px;
+    width: 25px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.649 6.77824L7.40705 11.021C7.33541 11.0902 7.27828 11.1729 7.23897 11.2644C7.19966 11.3559 7.17897 11.4544 7.17811 11.5539C7.17724 11.6535 7.19622 11.7523 7.23393 11.8445C7.27164 11.9366 7.32733 12.0204 7.39775 12.0908C7.46817 12.1612 7.55191 12.2169 7.64408 12.2546C7.73625 12.2923 7.83501 12.3113 7.9346 12.3104C8.03418 12.3096 8.1326 12.2889 8.2241 12.2496C8.3156 12.2103 8.39836 12.1531 8.46755 12.0815L12.7103 7.83949C13.1323 7.41749 13.3694 6.84515 13.3694 6.24836C13.3694 5.65157 13.1323 5.07923 12.7103 4.65724C12.2883 4.23524 11.716 3.99817 11.1192 3.99817C10.5224 3.99817 9.95004 4.23524 9.52805 4.65724L5.2853 8.89999C4.92985 9.24658 4.64677 9.66031 4.45247 10.1172C4.25816 10.574 4.15651 11.0649 4.1534 11.5613C4.15028 12.0578 4.24578 12.5499 4.43435 13.0092C4.62291 13.4684 4.90079 13.8857 5.25186 14.2367C5.60293 14.5877 6.02021 14.8655 6.47949 15.054C6.93877 15.2425 7.4309 15.3379 7.92735 15.3348C8.42379 15.3316 8.91467 15.2299 9.37149 15.0355C9.82832 14.8411 10.242 14.558 10.5885 14.2025L14.8313 9.96049L15.8918 11.021L11.649 15.2637C11.1615 15.7513 10.5827 16.138 9.94574 16.4019C9.30875 16.6657 8.62602 16.8015 7.93655 16.8015C7.24707 16.8015 6.56435 16.6657 5.92736 16.4019C5.29036 16.138 4.71158 15.7513 4.22405 15.2637C3.73651 14.7762 3.34978 14.1974 3.08593 13.5604C2.82208 12.9234 2.68628 12.2407 2.68628 11.5512C2.68628 10.8618 2.82208 10.179 3.08593 9.54205C3.34978 8.90505 3.73651 8.32627 4.22405 7.83874L8.46755 3.59674C9.17481 2.91364 10.1221 2.53567 11.1053 2.54421C12.0885 2.55275 13.0291 2.94714 13.7244 3.64242C14.4196 4.3377 14.814 5.27824 14.8226 6.26148C14.8311 7.24472 14.4531 8.19198 13.77 8.89924L9.52805 13.1435C9.31905 13.3524 9.07094 13.5182 8.79789 13.6312C8.52484 13.7443 8.23219 13.8025 7.93666 13.8024C7.64112 13.8024 7.34849 13.7442 7.07547 13.631C6.80244 13.5179 6.55437 13.3521 6.34542 13.1431C6.13647 12.9341 5.97073 12.686 5.85767 12.413C5.74461 12.1399 5.68643 11.8473 5.68647 11.5517C5.6865 11.2562 5.74475 10.9636 5.85787 10.6905C5.971 10.4175 6.1368 10.1694 6.3458 9.96049L10.5885 5.71774L11.649 6.77824Z' fill='%236B949B'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+  }
+  &__head {
+    font-size: 12px !important;
+    span {
+      font-weight: 500;
+      margin-right: 8px;
+      font-size: 12px !important;
+    }
+  }
+  &__reply-input {
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    height: 30px;
+    color: #000000;
+    padding: 8px;
+    font-size: 0.875rem;
+    width: 70%;
+    margin-right: 10px;
+  }
+  &__messages {
+    max-height: 300px;
+    overflow: auto;
+    .comments {
+      &__inner {
+        position: relative;
+        padding-left: 40px;
+        ~ .comments__inner {
+          margin-left: 40px;
+          width: calc(100% - 40px);
+        }
+      }
+    }
+    .comments__user {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    * {
+      font-size: 14px;
+    }
+  }
+  &__message-box {
+    padding-left: 40px;
+    ~ .comments__message-box {
+      margin-left: 40px;
+    }
+  }
+  &__reply {
+    color: $color-green;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .comments-box {
+    margin-bottom: 8px;
+  }
+  .d-btn-add {
+    font-size: 12px;
+    padding: 2px 8px;
+    width: 50px;
+    min-width: auto;
+    height: auto;
+    margin-left: 43px;
+  }
+}
+
+@include mobile {
+  .modal {
+    .modal-content {
+      padding: 0;
+    }
+  }
+}

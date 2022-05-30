@@ -1,0 +1,132 @@
+// Base Settings
+html {
+  background-color: $default-background-color;
+  font-family: $default-font-family;
+  font-size: 100%;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $default-background-color;
+  color: $default-font-color;
+  font-family: $default-font-family;
+  font-weight: $default-font-weight;
+  font-size: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font-family: $default-font-family;
+}
+button {
+  padding: 0;
+}
+iframe {
+  width: 100%;
+}
+
+a,
+button,
+input {
+  outline: none;
+}
+
+a {
+  color: $color-green;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-black;
+  font-weight: 600;
+  margin-bottom: $spacer-2;
+}
+
+h2 {
+  font-size: $font-size-base;
+  margin-bottom: $spacer-3;
+  color: $color-black;
+  font-weight: bold;
+}
+h3 {
+  font-size: $font-size-18;
+}
+
+p {
+  font-size: $font-size-14;
+  color: $color-text;
+}
+
+p,
+li {
+  margin-bottom: $spacer-2;
+}
+li {
+  display: inline-block;
+}
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+.content-wrapper {
+  @include content-wrapper;
+  padding-bottom: 24px;
+}
+
+.only-desktop {
+  display: none !important;
+}
+.only-mobile {
+  display: flex !important;
+}
+
+@include desktop {
+  .only-desktop {
+    display: flex !important;
+  }
+  .only-mobile {
+    display: none !important;
+  }
+}
+
+.modal-content {
+  box-shadow: 0px 2px 40px rgb(0 0 0 / 16%);
+  border-radius: 8px;
+  border: 0;
+  .d-btn {
+    min-width: 100px;
+  }
+}
+.modal-dialog{
+  margin: 0 auto;
+  height: 100%;
+  margin-top: 50px;
+}
+
+@include tablet-desktop {
+  h1,
+  h2 {
+    font-size: 20px;
+  }
+}
+
