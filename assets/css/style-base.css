@@ -325,6 +325,30 @@ button {
   left: 6px;
   top: 0;
 }
+.arrow:before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    display: block;
+    border-top: 2px solid #0e2046;
+    border-left: 2px solid #0e2046;
+    transform: rotate(-45deg);
+    right: 10px;
+    top: 10px;
+}
+.arrow:after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    display: block;
+    border-top: 2px solid #0e2046;
+    border-left: 2px solid #0e2046;
+    transform: rotate(-45deg);
+    right: 10px;
+    top: 10px;
+}
 .pl-25 {
   padding-left: 25px;
 }
